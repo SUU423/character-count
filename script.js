@@ -46,11 +46,13 @@ text.addEventListener('keyup', () => {
 });
 
 //目標進捗バー(突き抜けないようにするためにAI使用)
-
-text.addEventListener('keyup', () =>{
-   const percentage = Math.min(100, (text.value.length / goalshow.value)*100);
-   document.querySelector('#bar').style.width = `${percentage}%`
-
+text.addEventListener('keyup', () => {
+    if(goalshow.value > 0){
+        const percentage = Math.min(100, (text.value.length / goalshow.value)*100);
+        document.querySelector('#bar').style.width = `${percentage}%`;
+    }else{
+        document.querySelector('#bar').style.width = '0%';
+    }
 });
 
 
