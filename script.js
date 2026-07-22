@@ -69,14 +69,14 @@ clearBtn.addEventListener('click', () => {
 
 //クリアボタン(比較モード)
 const clearBtn2 = document.querySelector('#clearbtn2');
-clearBtn.addEventListener('click', () => {
+clearBtn2.addEventListener('click', () => {
     text1.value = '';
-    count.textContent = '0';
+    count1.textContent = '0';
 });
 const clearBtn3 = document.querySelector('#clearbtn3');
-clearBtn.addEventListener('click', () => {
+clearBtn3.addEventListener('click', () => {
     text2.value = '';
-    count.textContent = '0';
+    count2.textContent = '0';
 });
 
 
