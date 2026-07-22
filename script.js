@@ -45,6 +45,14 @@ text.addEventListener('keyup', () => {
     
 });
 
+//目標進捗バー(突き抜けないようにするためにAI使用)
+
+text.addEventListener('keyup', () =>{
+   const percentage = Math.min(100, (text.value.length / goalshow.value)*100);
+   document.querySelector('#bar').style.width = `${percentage}%`
+
+});
+
 
 //比較モードの文字数カウント
 const text1 = document.querySelector('#text1');
@@ -80,7 +88,7 @@ clearBtn3.addEventListener('click', () => {
 });
 
 
-// 2. コピー機能（テキスト入力ページ）
+// 2. コピー機能（テキスト入力ページ）AI使用
 const copyBtn = document.querySelector('#copybtn');
 const toast = document.getElementById('popup');
 
@@ -107,7 +115,7 @@ copyBtn.addEventListener('click', async () => {
   }
 });
    
-//コピー機能(比較ページ)
+//コピー機能(比較ページ)AI使用
 const copyBtn2 = document.querySelector('#copybtn2');
 const copyBtn3 = document.querySelector('#copybtn3');
 

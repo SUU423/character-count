@@ -182,6 +182,26 @@ h3{
   font-weight: bold;
 }
 
+/*====================
+  ||進捗バー
+====================*/
+#bar-area {
+  display: block;
+  margin: 10px 0;
+  width: 100%;             
+  height: 15px;           
+  background-color: #e0e0e0; 
+  border-radius: 20px;     
+}
+
+#bar {
+  background-color: #3dcf19;
+  border-radius: 20px;
+  height: 100%;            
+  width: 0%;               
+  transition: width 0.3s ease; 
+}
+
 /* =========================================
    6. テキストエリア
 ========================================= */
