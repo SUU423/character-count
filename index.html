@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字数カウント</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>大学生のための文字数カウント</h1>
+        <button id="dark-mode">ダークモード</button>
+    </header>
+    <main>
+        <div class="mode-selection">
+            <h2>モード選択</h2>
+            <div class="mode-buttons">
+                <button id="inputTab" class="btn1">テキスト入力</button>
+                <button id="compareTab" class="btn1">文章を比較する</button>
+
+            </div>
+    
+        </div>
+
+        
+
+            <div class="input-space" style="display: block;">
+                <h3>テキストエリアに文章を入力すると、リアルタイムで文字数が表示されます。</h3>
+                <div class="button-group">
+                    <button id="clearbtn" class="btn2">クリア</button>
+                    <button id="copybtn" class="btn2">コピー</button>
+                    <div class="goal-setting">
+                        <input type="checkbox" id="goal"><span class='btn-text'>目標を設定</span></button>
+                    </div>
+                    <div id="goalInput" style="display: none;">
+                        <input type="number" id="goalNumber" placeholder="目標文字数を入力">
+                    </div>
+                </div>
+
+                <textarea id="text" placeholder="ここに文章を入力してください"></textarea>
+                <div class="showArea">
+                    <p>文字数: <span id="count">0</span></p>
+                    <P>目標までの残り文字数: <span id="goalRemaining">0</span></P>
+                </div>
+            </div>
+
+
+
+
+            <div class="compare-space" style="display: none;">
+                <h3>2つの文章を比較して、文字数の差を確認できます。</h3>
+                <div class="compare1">
+                    <textarea id="text1" placeholder="文章1を入力してください"></textarea>
+                    <p>文章1の文字数: <span id="count1">0</span></p>
+                    <button id="clearbtn2" class="btn2">クリア</button>
+                     <button id="copybtn2" class="btn2">コピー</button>
+
+                </div>
+                <div class="compare2">
+                    <textarea id="text2" placeholder="文章2を入力してください"></textarea>
+                    <p>文章2の文字数: <span id="count2">0</span></p>
+                    <button id="clearbtn3" class="btn2">クリア</button>
+                    <button id="copybtn3" class="btn2">コピー</button>
+
+                </div>
+            </div>
+        
+    </main>
+
+    
+    <div id="popup" >
+        コピーしました！！
+    </div>
+
+</body>
+
+</html>
